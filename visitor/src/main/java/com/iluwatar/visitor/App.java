@@ -53,6 +53,8 @@ public class App {
                         new Sergeant(new Soldier(), new Soldier(), new Soldier()),
                         new Sergeant(new Soldier(), new Soldier(), new Soldier())
                 );
+        // Decoupling the operations from the object structure
+        // 解耦行为和对象，下面相同的Commander对象，对三个不同的Operator有三种不同的反应行为
         commander.accept(new SoldierVisitor());
         commander.accept(new SergeantVisitor());
         commander.accept(new CommanderVisitor());
