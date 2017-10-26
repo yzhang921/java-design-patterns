@@ -20,22 +20,25 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.iluwatar.chain;
+package com.iluwatar.chain.handler;
+
+import com.iluwatar.chain.Request;
+import com.iluwatar.chain.RequestType;
 
 /**
  * 
- * OrcCommander
+ * OrcOfficer
  *
  */
-public class OrcCommander extends RequestHandler {
+public class OrcOfficer extends RequestHandler {
 
-  public OrcCommander(RequestHandler handler) {
+  public OrcOfficer(RequestHandler handler) {
     super(handler);
   }
 
   @Override
   public void handleRequest(Request req) {
-    if (req.getRequestType().equals(RequestType.DEFEND_CASTLE)) {
+    if (req.getRequestType().equals(RequestType.TORTURE_PRISONER)) {
       printHandling(req);
       req.markHandled();
     } else {
@@ -45,6 +48,7 @@ public class OrcCommander extends RequestHandler {
 
   @Override
   public String toString() {
-    return "Orc commander";
+    return "Orc officer";
   }
+
 }

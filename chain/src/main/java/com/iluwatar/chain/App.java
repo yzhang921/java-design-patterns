@@ -22,6 +22,12 @@
  */
 package com.iluwatar.chain;
 
+import com.iluwatar.chain.client.OrcKing;
+import com.iluwatar.chain.handler.OrcCommander;
+import com.iluwatar.chain.handler.OrcOfficer;
+import com.iluwatar.chain.handler.OrcSoldier;
+import com.iluwatar.chain.handler.RequestHandler;
+
 /**
  * 
  * The Chain of Responsibility pattern is a design pattern consisting of command objects and a

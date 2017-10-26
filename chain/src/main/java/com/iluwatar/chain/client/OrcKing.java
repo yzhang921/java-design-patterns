@@ -20,32 +20,33 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.iluwatar.chain;
+package com.iluwatar.chain.client;
+
+import com.iluwatar.chain.Request;
+import com.iluwatar.chain.handler.OrcCommander;
+import com.iluwatar.chain.handler.OrcOfficer;
+import com.iluwatar.chain.handler.OrcSoldier;
+import com.iluwatar.chain.handler.RequestHandler;
 
 /**
  * 
- * OrcOfficer
- *
+ * OrcKing makes requests that are handled by the chain.
+ * 
  */
-public class OrcOfficer extends RequestHandler {
+public class OrcKing {
 
-  public OrcOfficer(RequestHandler handler) {
-    super(handler);
+  RequestHandler chain;
+
+  public OrcKing() {
+    buildChain();
   }
 
-  @Override
-  public void handleRequest(Request req) {
-    if (req.getRequestType().equals(RequestType.TORTURE_PRISONER)) {
-      printHandling(req);
-      req.markHandled();
-    } else {
-      super.handleRequest(req);
-    }
+  private void buildChain() {
+    chain = new OrcCommander(new OrcOfficer(new OrcSoldier(null)));
   }
 
-  @Override
-  public String toString() {
-    return "Orc officer";
+  public void makeRequest(Request req) {
+    chain.handleRequest(req);
   }
 
 }

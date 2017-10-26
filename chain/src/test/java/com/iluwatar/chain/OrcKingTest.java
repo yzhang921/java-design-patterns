@@ -22,6 +22,7 @@
  */
 package com.iluwatar.chain;
 
+import com.iluwatar.chain.client.OrcKing;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;

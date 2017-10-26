@@ -20,8 +20,9 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.iluwatar.chain;
+package com.iluwatar.chain.handler;
 
+import com.iluwatar.chain.Request;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
