@@ -29,6 +29,9 @@ import static org.mockito.Mockito.verifyNoMoreInteractions;
 
 import java.util.Arrays;
 import java.util.function.Function;
+
+import com.iluwatar.visitor.visitable.Unit;
+import com.iluwatar.visitor.vistors.UnitVisitor;
 import org.junit.Test;
 
 /**

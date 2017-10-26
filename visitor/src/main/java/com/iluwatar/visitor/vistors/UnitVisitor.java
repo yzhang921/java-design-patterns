@@ -20,29 +20,23 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.iluwatar.visitor;
+package com.iluwatar.visitor.vistors;
 
-import com.iluwatar.visitor.vistors.SergeantVisitor;
-
-import java.util.Optional;
+import com.iluwatar.visitor.visitable.Commander;
+import com.iluwatar.visitor.visitable.Sergeant;
+import com.iluwatar.visitor.visitable.Soldier;
 
 /**
- * Date: 12/30/15 - 18:36 PM
- *
- * @author Jeroen Meulemeester
+ * 
+ * Visitor interface.
+ * 
  */
-public class SergeantVisitorTest extends VisitorTest<SergeantVisitor> {
+public interface UnitVisitor {
 
-  /**
-   * Create a new test instance for the given visitor
-   */
-  public SergeantVisitorTest() {
-    super(
-        new SergeantVisitor(),
-        Optional.empty(),
-        Optional.of("Hello sergeant"),
-        Optional.empty()
-    );
-  }
+  void visitSoldier(Soldier soldier);
+
+  void visitSergeant(Sergeant sergeant);
+
+  void visitCommander(Commander commander);
 
 }

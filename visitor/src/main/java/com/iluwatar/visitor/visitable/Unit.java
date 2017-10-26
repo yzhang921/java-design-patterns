@@ -20,29 +20,29 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.iluwatar.visitor;
+package com.iluwatar.visitor.visitable;
 
-import com.iluwatar.visitor.vistors.SergeantVisitor;
-
-import java.util.Optional;
+import com.iluwatar.visitor.vistors.UnitVisitor;
 
 /**
- * Date: 12/30/15 - 18:36 PM
- *
- * @author Jeroen Meulemeester
+ * 
+ * Interface for the nodes in hierarchy.
+ * 
  */
-public class SergeantVisitorTest extends VisitorTest<SergeantVisitor> {
+public abstract class Unit {
 
-  /**
-   * Create a new test instance for the given visitor
-   */
-  public SergeantVisitorTest() {
-    super(
-        new SergeantVisitor(),
-        Optional.empty(),
-        Optional.of("Hello sergeant"),
-        Optional.empty()
-    );
+  private Unit[] children;
+
+  public Unit(Unit... children) {
+    this.children = children;
   }
 
+  /**
+   * Accept visitor
+   */
+  public void accept(UnitVisitor visitor) {
+    for (Unit child : children) {
+      child.accept(visitor);
+    }
+  }
 }

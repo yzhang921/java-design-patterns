@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.1.8" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
   realizations="true" associations="true" dependencies="false" nesting-relationships="true">  
-  <class id="1" language="java" name="com.iluwatar.visitor.SoldierVisitor" project="visitor" 
+  <class id="1" language="java" name="com.iluwatar.visitor.vistors.SoldierVisitor" project="visitor"
     file="/visitor/src/main/java/com/iluwatar/visitor/SoldierVisitor.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="142" width="222" x="181" y="204"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -10,7 +10,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="2" language="java" name="com.iluwatar.visitor.Commander" project="visitor" 
+  <class id="2" language="java" name="com.iluwatar.visitor.visitable.Commander" project="visitor"
     file="/visitor/src/main/java/com/iluwatar/visitor/Commander.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="124" width="159" x="705" y="386"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -19,7 +19,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="com.iluwatar.visitor.SergeantVisitor" project="visitor" 
+  <class id="3" language="java" name="com.iluwatar.visitor.vistors.SergeantVisitor" project="visitor"
     file="/visitor/src/main/java/com/iluwatar/visitor/SergeantVisitor.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="142" width="222" x="443" y="204"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -28,7 +28,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="com.iluwatar.visitor.Sergeant" project="visitor" 
+  <class id="4" language="java" name="com.iluwatar.visitor.visitable.Sergeant" project="visitor"
     file="/visitor/src/main/java/com/iluwatar/visitor/Sergeant.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="124" width="159" x="904" y="386"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -37,7 +37,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="5" language="java" name="com.iluwatar.visitor.UnitVisitor" project="visitor" 
+  <interface id="5" language="java" name="com.iluwatar.visitor.vistors.UnitVisitor" project="visitor"
     file="/visitor/src/main/java/com/iluwatar/visitor/UnitVisitor.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="124" width="222" x="443" y="386"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -46,7 +46,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="6" language="java" name="com.iluwatar.visitor.CommanderVisitor" project="visitor" 
+  <class id="6" language="java" name="com.iluwatar.visitor.vistors.CommanderVisitor" project="visitor"
     file="/visitor/src/main/java/com/iluwatar/visitor/CommanderVisitor.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="142" width="222" x="705" y="204"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -55,7 +55,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="7" language="java" name="com.iluwatar.visitor.Unit" project="visitor" 
+  <class id="7" language="java" name="com.iluwatar.visitor.visitable.Unit" project="visitor"
     file="/visitor/src/main/java/com/iluwatar/visitor/Unit.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="105" width="159" x="967" y="204"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -64,7 +64,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="8" language="java" name="com.iluwatar.visitor.Soldier" project="visitor" 
+  <class id="8" language="java" name="com.iluwatar.visitor.visitable.Soldier" project="visitor"
     file="/visitor/src/main/java/com/iluwatar/visitor/Soldier.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="124" width="159" x="1103" y="386"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 

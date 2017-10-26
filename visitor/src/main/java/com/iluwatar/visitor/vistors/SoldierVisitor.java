@@ -20,29 +20,35 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.iluwatar.visitor;
+package com.iluwatar.visitor.vistors;
 
-import com.iluwatar.visitor.vistors.SergeantVisitor;
-
-import java.util.Optional;
+import com.iluwatar.visitor.visitable.Commander;
+import com.iluwatar.visitor.visitable.Sergeant;
+import com.iluwatar.visitor.visitable.Soldier;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
- * Date: 12/30/15 - 18:36 PM
+ * 
+ * SoldierVisitor
  *
- * @author Jeroen Meulemeester
  */
-public class SergeantVisitorTest extends VisitorTest<SergeantVisitor> {
+public class SoldierVisitor implements UnitVisitor {
 
-  /**
-   * Create a new test instance for the given visitor
-   */
-  public SergeantVisitorTest() {
-    super(
-        new SergeantVisitor(),
-        Optional.empty(),
-        Optional.of("Hello sergeant"),
-        Optional.empty()
-    );
+  private static final Logger LOGGER = LoggerFactory.getLogger(SoldierVisitor.class);
+
+  @Override
+  public void visitSoldier(Soldier soldier) {
+    LOGGER.info("Greetings {}", soldier);
   }
 
+  @Override
+  public void visitSergeant(Sergeant sergeant) {
+    // Do nothing
+  }
+
+  @Override
+  public void visitCommander(Commander commander) {
+    // Do nothing
+  }
 }

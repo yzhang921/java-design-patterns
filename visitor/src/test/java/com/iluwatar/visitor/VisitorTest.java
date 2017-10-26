@@ -30,6 +30,11 @@ import ch.qos.logback.core.AppenderBase;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
+
+import com.iluwatar.visitor.visitable.Commander;
+import com.iluwatar.visitor.visitable.Sergeant;
+import com.iluwatar.visitor.visitable.Soldier;
+import com.iluwatar.visitor.vistors.UnitVisitor;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

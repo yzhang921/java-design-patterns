@@ -22,6 +22,9 @@
  */
 package com.iluwatar.visitor;
 
+import com.iluwatar.visitor.visitable.Sergeant;
+import com.iluwatar.visitor.vistors.UnitVisitor;
+
 import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.verify;
 
